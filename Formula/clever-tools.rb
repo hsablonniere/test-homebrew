@@ -11,9 +11,9 @@ class CleverTools < Formula
   def install
     bin.install "clever", "nodegit.node"
     system "mkdir -p #{prefix}/etc/bash_completion.d"
-    system "mkdir -p #{prefix}/usr/share/zsh-completions"
+    system "mkdir -p #{prefix}/share/zsh-completions"
     system "#{prefix}/bin/clever --bash-autocomplete-script clever > #{prefix}/etc/bash_completion.d/clever"
-    system "#{prefix}/bin/clever --zsh-autocomplete-script clever > #{prefix}/usr/share/zsh-completions/_clever"
+    system "#{prefix}/bin/clever --zsh-autocomplete-script clever > #{prefix}/share/zsh-completions/_clever"
   end
 
   test do
