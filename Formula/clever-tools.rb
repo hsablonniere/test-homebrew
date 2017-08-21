@@ -5,15 +5,18 @@ class CleverTools < Formula
   version "0.9.0"
   sha256 "5c4f995bff01fcdaae599e9ad86b0ab4e96f73ff4975be20bd0896b4c32b2224"
 
-  depends_on "bash-completion"
-  depends_on "zsh-completions"
+  depends_on "bash-completion" => :recommended
+  depends_on "zsh-completions" => :recommended
 
   def install
     bin.install "clever", "nodegit.node"
-    system "mkdir -p #{prefix}/etc/bash_completion.d"
-    system "mkdir -p #{prefix}/share/zsh-completions"
-    system "#{prefix}/bin/clever --bash-autocomplete-script clever > #{prefix}/etc/bash_completion.d/clever"
-    system "#{prefix}/bin/clever --zsh-autocomplete-script clever > #{prefix}/share/zsh-completions/_clever"
+    system "mkdir -p #{prefix}/completions/bash"
+    system "mkdir -p #{prefix}/completions/zsh"
+    system "#{prefix}/bin/clever --bash-autocomplete-script clever > #{prefix}/completions/bash/clever"
+    system "#{prefix}/bin/clever --zsh-autocomplete-script clever >  #{prefix}/completions/zsh/_clever"
+
+    bash_completion.install "#{prefix}/completions/bash/clever"
+    zsh_completion.install "#{prefix}/completions/zsh/_clever"
   end
 
   test do
