@@ -6,7 +6,7 @@ class CleverTools < Formula
   sha256 "5c4f995bff01fcdaae599e9ad86b0ab4e96f73ff4975be20bd0896b4c32b2224"
 
   depends_on "bash-completion"
-  depends_on "zsh-completion"
+  depends_on "zsh-completions"
 
   def install
     bin.install "clever", "nodegit.node"
