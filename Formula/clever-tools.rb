@@ -1,15 +1,15 @@
 class CleverTools < Formula
-  desc "Command Line Interface for Clever Cloud"
+  desc "Command Line Interface for Clever Cloud."
   homepage "https://github.com/CleverCloud/clever-tools"
-  url "https://clever-tools.cellar.services.clever-cloud.com/releases/0.10.1/clever-tools-0.10.1_macos.tar.gz"
-  version "0.10.1"
-  sha256 "2423e9b6224774a1c2e7da3c089f3c06c6c31645069a6c3c193cf81795d9b9d7"
+  url "https://clever-tools.cellar.services.clever-cloud.com/releases/1.0.0/clever-tools-1.0.0_macos.tar.gz"
+  version "1.0.0"
+  sha256 "bdd69308dd033aaa84acbb20d4c770d5a671fa04889e7000ea24e8b4668d91ce"
 
   depends_on "bash-completion" => :recommended
   depends_on "zsh-completions" => :recommended
 
   def install
-    bin.install "clever", "nodegit.node"
+    bin.install "clever"
     system "mkdir -p #{prefix}/completions/bash"
     system "mkdir -p #{prefix}/completions/zsh"
     system "#{prefix}/bin/clever --bash-autocomplete-script clever > #{prefix}/completions/bash/clever"

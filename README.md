@@ -4,5 +4,4 @@ This tap is there to allow easy installation of [Clever Cloud tools](https://git
 
 ## Install
 
-- if necessary, remove the old version (installed with `npm install -g clever-tools`)
 - type `brew install CleverCloud/homebrew-tap/clever-tools`
