@@ -3,7 +3,7 @@ class CleverTools < Formula
   homepage "https://github.com/CleverCloud/clever-tools"
   url "https://clever-tools.cellar.services.clever-cloud.com/releases/1.1.1/clever-tools-1.1.1_macos.tar.gz"
   version "1.1.1"
-  sha256 "50c4883f103a2b5644e6a06dab11a952e882ce5ab8d7935f7021549e37543db9"
+  sha256 "5020fb133a5fe27b7e314bcf411f791f9b8631ed9cf9ed2d5f400d686c64a7fc"
 
   depends_on "bash-completion" => :recommended
   depends_on "zsh-completions" => :recommended
