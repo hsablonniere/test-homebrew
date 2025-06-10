@@ -1,9 +1,9 @@
 class CleverTools < Formula
   desc "Command Line Interface for Clever Cloud."
   homepage "https://github.com/CleverCloud/clever-tools"
-  url "https://clever-tools.clever-cloud.com/releases/3.12.0/clever-tools-3.12.0_macos.tar.gz"
-  version "3.12.0"
-  sha256 "f9e263226ec343b56cbcaeb6a1c9558111a01b04c9101dfbf54c3c74f3cd34a8"
+  url "https://clever-tools.clever-cloud.com/releases/3.13.0/clever-tools-3.13.0_macos.tar.gz"
+  version "3.13.0"
+  sha256 "d26e674108479e31d100b5c08d94f4fccabcaae30c2ec087aa2a3bc799d86310"
 
   depends_on "bash-completion" => :recommended
   depends_on "zsh-completions" => :recommended
